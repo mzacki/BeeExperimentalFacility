@@ -22,6 +22,6 @@ class TestController {
 
     @GetMapping("/")
     String test() {
-        return "Test passed!";
+        return "Test no. 2 passed!";
     }
 }
