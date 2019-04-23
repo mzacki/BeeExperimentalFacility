@@ -1,5 +1,6 @@
 package com.test;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,13 +26,13 @@ public class Application {
     }
 
 
-    @Bean
+    /*@Bean
     ApplicationRunner applicationRunner(InsertRepository insertRepository) {
         return args -> {
             insertRepository.save(new Insert("storm"));
             insertRepository.save(new Insert("rain"));
         };
-    }
+    }*/
 
 }
 
