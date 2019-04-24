@@ -1,10 +1,7 @@
 package com.test;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,13 +24,13 @@ public class Application {
     }
 
 
-    @Bean
+    /*@Bean
     ApplicationRunner applicationRunner(InsertRepository insertRepository) {
         return args -> {
             insertRepository.save(new Insert("storm"));
             insertRepository.save(new Insert("rain"));
         };
-    }
+***REMOVED***
 
 }
 
@@ -50,6 +47,12 @@ class TestController {
     @GetMapping("/inserts")
     Iterable<Insert> inserts() {
         return insertRepository.findAll();
+    }
+
+    @GetMapping("/save")
+    String save() {
+        insertRepository.save(new Insert("storm"));
+        return "Saved!";
     }
 
     public TestController(InsertRepository insertRepository) {
