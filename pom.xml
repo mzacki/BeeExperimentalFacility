@@ -68,7 +68,7 @@
                         </program>
                         <program>
                             <mainClass>RestController</mainClass>
-                            <name>oneoff</name>
+                            <name>web</name>
                         </program>
                     </programs>
                 </configuration>
