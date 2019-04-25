@@ -7,6 +7,8 @@ import net.aksingh.owmjapis.model.CurrentWeather;
 import net.aksingh.owmjapis.model.param.Weather;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 /**
@@ -45,7 +47,10 @@ public class OwmWeatherProvider {
         String description = String.valueOf(cwd.getWeatherList().get(0).getMoreInfo());
 
 
-        return new WeatherData(temperature, windSpeed, pressure, humidity, cloudCover);
+        //return new WeatherData(temperature, windSpeed, pressure, humidity, cloudCover);
+
+        return new WeatherData(LocalDate.now(), LocalTime.now(), temperature, windSpeed, pressure, humidity,
+                cloudCover);
 
     }
 
