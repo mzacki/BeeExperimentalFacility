@@ -23,7 +23,7 @@ public class RunnableStation implements Runnable {
     WeatherDataRepository weatherDataRepository;
 
     @Override
-    @Bean
+   @Bean
     public void run() {
         on = true;
         while (on) {
