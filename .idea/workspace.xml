@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5538d9d8-4134-4ccc-9602-928e8524ab52" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/provider/ScheduledStation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/TestProcfile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/provider/RunnableStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/provider/RunnableStation.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/entity/WeatherData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/entity/WeatherData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/test/provider/RunnableStation.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -255,7 +248,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556560993663" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556562326117" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -312,7 +305,7 @@
       <workItem from="1556123668150" duration="7668000" />
       <workItem from="1556204740936" duration="9457000" />
       <workItem from="1556472000670" duration="593000" />
-      <workItem from="1556553968373" duration="4063000" />
+      <workItem from="1556553968373" duration="5264000" />
     </task>
     <task id="LOCAL-00001" summary="-test commit">
       <created>1556557658514</created>
@@ -325,7 +318,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30331000" />
+    <option name="totallyTimeSpent" value="31532000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
