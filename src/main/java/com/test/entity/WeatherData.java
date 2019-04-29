@@ -31,7 +31,7 @@ public class WeatherData {
     @Column(name="humidity")
     private double humidity;
 
-    public WeatherData() {}
+    private WeatherData() {}
 
     /*public WeatherData(int id, double temperature, double wind, double pressure, double cloudCover,
                        double humidity) {
