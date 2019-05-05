@@ -1,4 +1,4 @@
-package com.test.entity;
+package com.meteo.entity;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -64,7 +64,7 @@ public class WeatherData {
 
     @Override
     public String toString() {
-        return "Current meteo conditions: " + date + time +
+        return "Significant for: " + date + " " + time + '\n' +
                 "temperature: " + temperature + " \'C" + '\n' +
                 "wind speed: " + wind + " m/s" + '\n' +
                 "pressure: " + pressure + " hpa" + '\n' +

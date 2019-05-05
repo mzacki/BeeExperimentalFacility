@@ -1,7 +1,7 @@
-package com.test.controller;
+package com.meteo.controller;
 
-import com.test.dao.WeatherDataRepository;
-import com.test.entity.WeatherData;
+import com.meteo.dao.WeatherDataRepository;
+import com.meteo.entity.WeatherData;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
