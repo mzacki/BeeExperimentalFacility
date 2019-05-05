@@ -1,7 +1,7 @@
-package com.test.dao;
+package com.meteo.dao;
 
 
-import com.test.entity.WeatherData;
+import com.meteo.entity.WeatherData;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
