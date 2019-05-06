@@ -3,6 +3,7 @@ package com.meteo.entity;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 /**
  * Created by Matt on 20.09.2018 at 20:20.
@@ -33,16 +34,6 @@ public class WeatherData {
 
     private WeatherData() {}
 
-    /*public WeatherData(int id, double temperature, double wind, double pressure, double cloudCover,
-                       double humidity) {
-        this.id = id;
-        this.temperature = temperature;
-        this.wind = wind;
-        this.pressure = pressure;
-        this.cloudCover = cloudCover;
-        this.humidity = humidity;
-    }*/
-
     public WeatherData(double temperature, double wind, double pressure, double cloudCover,
                        double humidity) {
         this.temperature = temperature;
@@ -62,9 +53,12 @@ public class WeatherData {
         this.humidity = humidity;
     }
 
+
     @Override
     public String toString() {
-        return "Significant for: " + date + " " + time + '\n' +
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+
+        return "Significant for: " + date + " " + time.format(formatter) + '\n' +
                 "temperature: " + temperature + " \'C" + '\n' +
                 "wind speed: " + wind + " m/s" + '\n' +
                 "pressure: " + pressure + " hpa" + '\n' +

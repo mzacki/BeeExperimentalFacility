@@ -7,8 +7,8 @@ import net.aksingh.owmjapis.model.CurrentWeather;
 import net.aksingh.owmjapis.model.param.Weather;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.List;
 
 /**
@@ -46,10 +46,11 @@ public class OwmWeatherProvider {
         List<Weather> overall = cwd.getWeatherList();
         String description = String.valueOf(cwd.getWeatherList().get(0).getMoreInfo());
 
+        ZonedDateTime zonedDateTimeNow = ZonedDateTime.now(ZoneId.of("Europe/Paris"));
 
-        //return new WeatherData(temperature, windSpeed, pressure, humidity, cloudCover);
-
-        return new WeatherData(LocalDate.now(), LocalTime.now(), temperature, windSpeed, pressure, humidity,
+        return new WeatherData(zonedDateTimeNow.toLocalDate(), zonedDateTimeNow.toLocalTime(), temperature, windSpeed,
+                pressure,
+                humidity,
                 cloudCover);
 
     }
