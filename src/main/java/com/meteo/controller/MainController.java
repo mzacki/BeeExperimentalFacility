@@ -25,7 +25,6 @@ public class MainController {
 
     @GetMapping("/index")
     public String index(Model model) {
-        //LocalDateTime dateTime = LocalDateTime.now();
         ZonedDateTime zonedDateTimeNow = ZonedDateTime.now(ZoneId.of("Europe/Paris"));
         WeatherData weatherData = owmWeatherProvider.getWeatherData();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE, dd-MM-yyyy HH:mm:ss");

@@ -20,7 +20,7 @@ public class ScheduledStation {
     @Autowired
     WeatherDataRepository weatherDataRepository;
 
-        @Scheduled(fixedRate = 900000)
+        @Scheduled(cron = "0 0 0,3,6,9,12,15,18,21 * * *")
         public void checkAndSave() {
             WeatherData weatherData = owmWeatherProvider.getWeatherData();
             log.info("Updating...");
