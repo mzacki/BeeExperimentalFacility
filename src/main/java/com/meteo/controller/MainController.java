@@ -8,7 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
 /**
@@ -24,10 +25,11 @@ public class MainController {
 
     @GetMapping("/index")
     public String index(Model model) {
-        LocalDateTime dateTime = LocalDateTime.now();
+        //LocalDateTime dateTime = LocalDateTime.now();
+        ZonedDateTime zonedDateTimeNow = ZonedDateTime.now(ZoneId.of("Europe/Paris"));
         WeatherData weatherData = owmWeatherProvider.getWeatherData();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE, dd-MM-yyyy HH:mm:ss");
-        model.addAttribute("Date", dateTime.format(formatter));
+        model.addAttribute("Date", zonedDateTimeNow.format(formatter));
         model.addAttribute("Meteo", weatherData.toString());
         return "index";
     }
