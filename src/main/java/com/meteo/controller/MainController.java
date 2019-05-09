@@ -40,21 +40,6 @@ public class MainController {
         return "index";
     }
 
-    @GetMapping("/menu")
-    public String menu() {
-        return "menu";
-    }
-
-    @GetMapping("/meteo")
-    public String meteo(Model model) {
-        ZonedDateTime zonedDateTimeNow = ZonedDateTime.now(ZoneId.of("Europe/Paris"));
-        WeatherData weatherData = owmWeatherProvider.getWeatherData();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE, dd-MM-yyyy HH:mm:ss");
-        model.addAttribute("Date", zonedDateTimeNow.format(formatter));
-        model.addAttribute("Meteo", weatherData.toString());
-        return "meteo";
-    }
-
     @GetMapping("/login")
     public String login() {
         return "login";
@@ -71,4 +56,26 @@ public class MainController {
         model.addAttribute("logout", true);
         return "login";
     }
+
+    @GetMapping("/menu")
+    public String menu() {
+        return "menu";
+    }
+
+    @GetMapping("/meteo")
+    public String meteo(Model model) {
+        ZonedDateTime zonedDateTimeNow = ZonedDateTime.now(ZoneId.of("Europe/Paris"));
+        WeatherData weatherData = owmWeatherProvider.getWeatherData();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE, dd-MM-yyyy HH:mm:ss");
+        model.addAttribute("Date", zonedDateTimeNow.format(formatter));
+        model.addAttribute("Meteo", weatherData.toString());
+        return "meteo";
+    }
+
+    @GetMapping("/db")
+    public String db() {
+        return "db";
+    }
+
+
 }
