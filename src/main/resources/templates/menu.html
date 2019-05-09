@@ -10,22 +10,21 @@
 </head>
 <body>
 <a th:href="@{/meteo}" class="btn btn-dark btn-lg btn-block">Meteo</a>
-<a th:href="@{/calc}" class="btn btn-dark btn-lg btn-block" disabled>Swarm Strength Forecast</a>
-<a th:href="@{/beehives/list}" type="button" class="btn btn-dark btn-lg btn-block" disabled>Database</a>
-<a th:href="@{/calc}"type="button" class="btn btn-dark btn-lg btn-block" disabled>REST API</a>
+<a th:href="@{/calc}" class="btn btn-dark btn-lg btn-block disabled">Colony Expansion Algorithm</a>
+<a th:href="@{/db}" type="button" class="btn btn-dark btn-lg btn-block">Database</a>
+<a th:href="@{/calc}"type="button" class="btn btn-dark btn-lg btn-block disabled">REST API</a>
 <!--<a type="button" class="btn btn-danger" th:href="@{/logout}">Logout</a>-->
 <p>
 <form th:action="@{/logout}" method="post">
     <input type="submit" class="btn btn-danger btn-lg btn-block" value="Logout"/>
 </form>
 </p>
-<div>
+<div style="text-align: center">
     <span sec:authorize="isAuthenticated()">
-                | Logged user: <span sec:authentication="name"></span> |
-                Roles: <span sec:authentication="principal.authorities"></span> |
-                <a th:href="@{/logout}">Sign Out</a>
+                &COPY; 2019 by Kot Fioletowy | Logged user: <span sec:authentication="name"></span> |
+                Roles: <span sec:authentication="authorities"></span> |
+                <a th:href="@{/logout}">Log Out</a>
             </span>
-    Logged in as <span sec:authentication="name" /> with authorities: <span sec:authentication="authorities" />
 </div>
 </body>
 </html>

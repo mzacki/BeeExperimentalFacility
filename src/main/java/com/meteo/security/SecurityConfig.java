@@ -16,13 +16,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
-                .withUser("kot")
-                .password("{noop}mru")
+                .withUser("user")
+                .password("{noop}pass")
                 .roles("USER")
                 .and()
-                .withUser("admin")
-                .password("{noop}pass")
-                .roles("ADMIN");
+                .withUser("kot")
+                .password("{noop}mru")
+                .roles("ADMIN", "NACZELNY KOT MROWISKA");
     }
 
     /*Some of the actuator endpoints (e.g. /loggers) support POST requests.
@@ -32,9 +32,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                    //.anyRequest().authenticated()
-                    .antMatchers("/").permitAll()
-                    .antMatchers("/index").authenticated()
+                    .antMatchers("/", "/index","/css/**").permitAll()
+                    .antMatchers("/db").hasRole("ADMIN")
+                    .anyRequest().authenticated()
                 .and()
                     .formLogin()
                     .loginPage("/login")
