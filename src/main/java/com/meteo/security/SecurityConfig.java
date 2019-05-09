@@ -25,10 +25,28 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .roles("ADMIN");
     }
 
+    /*Some of the actuator endpoints (e.g. /loggers) support POST requests.
+    When using Spring Security you need to ignore the actuator endpoints for CSRF-Protection
+    as the Spring Boot Admin Server currently lacks support.*/
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf()
-                .ignoringAntMatchers("/actuator/**");
+        http
+                .authorizeRequests()
+                    //.anyRequest().authenticated()
+                    .antMatchers("/").permitAll()
+                    .antMatchers("/index").authenticated()
+                .and()
+                    .formLogin()
+                    .loginPage("/login")
+                    .failureUrl("/login-error")
+                    .permitAll()
+                .and()
+                    .logout()
+                    .logoutSuccessUrl("/logout")
+                    .permitAll()
+                .and()
+                    .csrf()
+                    .ignoringAntMatchers("/actuator/**");
     }
 
 }
