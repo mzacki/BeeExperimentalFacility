@@ -52,6 +52,7 @@ p {
 
 .clearfix {
   *zoom: 1;
+  border: none;
 }
 .clearfix:before, .clearfix:after {
   content: ' ';
