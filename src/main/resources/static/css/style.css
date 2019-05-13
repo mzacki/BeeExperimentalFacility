@@ -1,12 +1,4 @@
-/* CSS Document */
-/* ---------- FONTAWESOME ---------- */
-/* ---------- http://fortawesome.github.com/Font-Awesome/ ---------- */
-/* ---------- http://weloveiconfonts.com/ ---------- */
-@import url(https://weloveiconfonts.com/api/?family=fontawesome);
-/* ---------- ERIC MEYER'S RESET CSS ---------- */
-/* ---------- http://meyerweb.com/eric/tools/css/reset/ ---------- */
-@import url(https://meyerweb.com/eric/tools/css/reset/reset.css);
-/* ---------- FONTAWESOME ---------- */
+
 [class*="fontawesome-"]:before {
   font-family: 'FontAwesome', sans-serif;
 }
@@ -34,7 +26,8 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  color: rebeccapurple;
+  text-decoration: none;
 }
 
 input {
@@ -75,6 +68,7 @@ p {
 #login {
   width: 280px;
   margin: 0 auto;
+
 }
 
 #login form span {
