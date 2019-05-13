@@ -74,6 +74,7 @@ p {
 /* ---------- LOGIN ---------- */
 #login {
   width: 280px;
+  margin: 0 auto;
 }
 
 #login form span {
