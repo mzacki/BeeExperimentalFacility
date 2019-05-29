@@ -6,6 +6,8 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+import javax.sql.DataSource;
+
 /**
  * Created by Matt on 08.05.2019 at 19:14.
  */
@@ -14,6 +16,19 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
+    DataSource dataSource;
+
+    @Autowired
+    public void configureGlobal(AuthenticationManagerBuilder builder) throws Exception {
+        builder.jdbcAuthentication()
+                .usersByUsernameQuery("SELECT username, password, enabled FROM users WHERE username=?")
+                .authoritiesByUsernameQuery("SELECT username, authority FROM users WHERE username=?")
+                .dataSource(dataSource);
+    }
+
+
+
+    /*@Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
                 .withUser("user")
@@ -22,8 +37,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .withUser("kot")
                 .password("{noop}mru")
-                .roles("ADMIN", "NACZELNY KOT MROWISKA");
-    }
+                .roles("ADMIN");
+    }*/
 
     /*Some of the actuator endpoints (e.g. /loggers) support POST requests.
     When using Spring Security you need to ignore the actuator endpoints for CSRF-Protection
@@ -46,7 +61,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .permitAll()
                 .and()
                     .csrf()
-                    .ignoringAntMatchers("/actuator/**");
+                    .ignoringAntMatchers("/actuator/**")
+                .and()
+                    .exceptionHandling().accessDeniedPage("/403");
     }
 
 }
