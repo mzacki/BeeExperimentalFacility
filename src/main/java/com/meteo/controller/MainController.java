@@ -77,5 +77,10 @@ public class MainController {
         return "db";
     }
 
+    @GetMapping("/403")
+    public String accesDenied() {
+        return "403";
+    }
+
 
 }

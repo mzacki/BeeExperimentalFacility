@@ -11,14 +11,17 @@
 <body>
 <a th:href="@{/meteo}" class="btn btn-dark btn-lg btn-block">Meteo</a>
 <a th:href="@{/calc}" class="btn btn-dark btn-lg btn-block disabled">Colony Expansion Algorithm</a>
-<a th:href="@{/db}" type="button" class="btn btn-dark btn-lg btn-block">Database</a>
+<div sec:authorize access="hasRole('ADMIN')">
+    <a th:href="@{/db}" type="button" class="btn btn-dark btn-lg btn-block">Database</a>
+</div>
 <a th:href="@{/calc}"type="button" class="btn btn-dark btn-lg btn-block disabled">REST API</a>
-<!--<a type="button" class="btn btn-danger" th:href="@{/logout}">Logout</a>-->
+<hr>
 <p>
 <form th:action="@{/logout}" method="post">
     <input type="submit" class="btn btn-danger btn-lg btn-block" value="Logout"/>
 </form>
 </p>
+<hr>
 <div style="text-align: center">
     <span sec:authorize="isAuthenticated()">
                 &COPY; 2019 by ***REMOVED*** Fioletowy | Logged ***REMOVED***: <span sec:authentication="name"></span> |

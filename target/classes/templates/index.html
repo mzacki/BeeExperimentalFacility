@@ -9,10 +9,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" type="text/css"/>
     <link rel="stylesheet" href="css/style.css" media="screen" type="text/css"/>
 
-
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700">
-
-
 </head>
 
 <body>
@@ -23,12 +19,11 @@
 
 <div id="welcome">
 
-    <p th:text="'Current human time is ' + ${Date}" />
+    <p th:text="'Current human time is ' + ${Date}"/>
     <br>
-    <p th:text="'Now is ' + ${BeeDate} + ' year of the Bee Era.'" />
+    <p th:text="'Now is ' + ${BeeDate} + ' year of the Bee Era.'"/>
     <br><br>
-    <a th:href="@{/menu}"  class="btn btn-outline-secondary btn-lg">Enter the Colony</a>
-
+    <a th:href="@{/menu}" class="btn btn-outline-secondary btn-lg">Enter the Colony</a>
 
 
 </div>
