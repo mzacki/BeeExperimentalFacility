@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5538d9d8-4134-4ccc-9602-928e8524ab52" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/asciidoc/documentation.adoc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/meteo/dao/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/meteo/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/403.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/meteo/provider/ScheduledStationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/meteo/controller/MainControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/meteo/controller/MainServerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/meteo/provider/OwmWeatherProviderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProcfile.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/ApiTest.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/meteo/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/meteo/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/meteo/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/meteo/security/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/meteo/provider/OwmWeatherProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/meteo/provider/OwmWeatherProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/meteo/provider/ScheduledStationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/meteo/provider/ScheduledStationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/meteo/provider/OwmWeatherProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/meteo/provider/OwmWeatherProvider.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,49 +21,36 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/ApiTest$Application.ic" NAME="Application Coverage Results" MODIFIED="1559153814123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.meteo.*</FILTER>
+    </SUITE>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/dao/UserRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/entity/WeatherData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1008">
-              <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/security/SecurityConfig.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/provider/OwmWeatherProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="364">
+              <caret line="50" column="25" lean-forward="true" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/provider/ScheduledStation.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/meteo/provider/OwmWeatherProviderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="20" selection-end-column="48" />
+            <state relative-caret-position="691">
+              <caret line="38" column="82" selection-start-line="38" selection-start-column="82" selection-end-line="38" selection-end-column="82" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+            <state relative-caret-position="112">
+              <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -81,26 +58,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/meteo/provider/ScheduledStationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="84">
+              <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/dao/WeatherDataRepository.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/provider/ScheduledStation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/entity/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+            <state relative-caret-position="168">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -108,17 +76,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="784">
+            <state relative-caret-position="-415">
               <caret line="31" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/style.css">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/meteo/controller/MainServerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3948">
-              <caret line="141" column="1" selection-start-line="141" selection-start-column="1" selection-end-line="141" selection-end-column="1" />
+            <state relative-caret-position="144">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/meteo/controller/MainControllerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -130,14 +107,15 @@
       <list>
         <option value="Interface" />
         <option value="HTML File" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>tomcat</find>
+      <find>test</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,7 +137,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/test/controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/entity/WeatherData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/meteo/entity/WeatherData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/meteo/provider/OwmWeatherProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/meteo/provider/ScheduledStation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/meteo/security/SpringConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
@@ -177,7 +154,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/meteo/security/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/asciidoc/documentation.adoc" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/meteo/provider/OwmWeatherProvider.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/meteo/provider/OwmWeatherProviderTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/meteo/provider/ScheduledStationTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/meteo/controller/MainSlashTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/meteo/controller/MainControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/meteo/controller/MainServerTest.java" />
       </list>
     </option>
   </component>
@@ -213,6 +195,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -293,12 +277,39 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ApiTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ApiTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ApiTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ApiTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ApiTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ApiTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ApiTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ApiTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="provider" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -309,7 +320,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559151476841" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559583952753" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -348,7 +359,61 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ScheduledStationTest.checkAndSave">
+  <component name="RunManager" selected="JUnit.All in ApiTest">
+    <configuration name="All in ApiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ApiTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ApiTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.meteo.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.meteo.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.meteo.controller.MainControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainControllerTest.exampleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ApiTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.meteo.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.meteo.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.meteo.controller.MainControllerTest" />
+      <option name="METHOD_NAME" value="exampleTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainServerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ApiTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.meteo.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.meteo.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.meteo.controller.MainServerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ScheduledStationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ApiTest" />
       <extension name="coverage">
@@ -364,40 +429,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScheduledStationTest.checkAndSave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ApiTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.meteo.provider.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.meteo.provider" />
-      <option name="MAIN_CLASS_NAME" value="com.meteo.provider.ScheduledStationTest" />
-      <option name="METHOD_NAME" value="checkAndSave" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="ApiTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.meteo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.meteo.Application" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ScheduledStationTest.checkAndSave" />
+        <item itemvalue="JUnit.All in ApiTest" />
+        <item itemvalue="JUnit.MainServerTest" />
+        <item itemvalue="JUnit.MainControllerTest" />
+        <item itemvalue="JUnit.MainControllerTest.exampleTest" />
         <item itemvalue="JUnit.ScheduledStationTest" />
-        <item itemvalue="Spring Boot.Application" />
       </list>
     </recent_temporary>
   </component>
@@ -433,7 +471,8 @@
       <workItem from="1558537943131" duration="2232000" />
       <workItem from="1558546735659" duration="2191000" />
       <workItem from="1559024739591" duration="6752000" />
-      <workItem from="1559148323962" duration="3217000" />
+      <workItem from="1559148323962" duration="5654000" />
+      <workItem from="1559578761668" duration="5003000" />
     </task>
     <task id="LOCAL-00001" summary="-test commit">
       <created>1556557658514</created>
@@ -449,22 +488,56 @@
       <option name="project" value="LOCAL" />
       <updated>1557167090260</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="+asciidoc&#10;+first unit test&#10;+in-memory auth changed to database&#10;+password hash">
+      <created>1559151630718</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1559151630718</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ScheduledStationTest - 2019.05.29 at 19h 32m 20s.xml">
+    <history-entry file="ScheduledStationTest - 2019.06.03 at 18h 47m 23s.xml">
       <configuration name="ScheduledStationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ScheduledStationTest - 2019.06.03 at 18h 54m 27s.xml">
+      <configuration name="ScheduledStationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ScheduledStationTest - 2019.06.03 at 18h 55m 13s.xml">
+      <configuration name="ScheduledStationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainSlashTest - 2019.06.03 at 19h 15m 33s.xml">
+      <configuration name="MainSlashTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainSlashTest_exampleTest - 2019.06.03 at 19h 16m 40s.xml">
+      <configuration name="MainSlashTest.exampleTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainSlashTest - 2019.06.03 at 19h 17m 21s.xml">
+      <configuration name="MainSlashTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainControllerTest - 2019.06.03 at 19h 21m 03s.xml">
+      <configuration name="MainControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainServerTest - 2019.06.03 at 19h 32m 12s.xml">
+      <configuration name="MainServerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainServerTest - 2019.06.03 at 19h 32m 44s.xml">
+      <configuration name="MainServerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_ApiTest - 2019.06.03 at 19h 45m 50s.xml">
+      <configuration name="All in ApiTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135757000" />
+    <option name="totallyTimeSpent" value="143197000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49888143" visible="true" weight="0.23684211" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49888143" visible="true" weight="0.24006444" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -497,6 +570,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.32975295" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,36 +579,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="-test commit" />
     <MESSAGE value="+local timezone" />
-    <option name="LAST_COMMIT_MESSAGE" value="+local timezone" />
+    <MESSAGE value="+asciidoc&#10;+first unit test&#10;+in-memory auth changed to database&#10;+password hash" />
+    <option name="LAST_COMMIT_MESSAGE" value="+asciidoc&#10;+first unit test&#10;+in-memory auth changed to database&#10;+password hash" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/Insert.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/InsertRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/TestController.java" />
-    <entry file="file://$PROJECT_DIR$/TestProcfile.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="4" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/TestProcfile.txt" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/provider/RunnableStation.txt" />
     <entry file="file://$PROJECT_DIR$/ApiTest.iml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/provider/OwmWeatherProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1288">
-          <caret line="46" column="46" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor" />
@@ -602,13 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/asciidoc/documentation.adoc">
       <provider selected="true" editor-type-id="split-provider[text-editor;AsciiDocPreviewEditor]">
         <state split_layout="SPLIT">
@@ -616,13 +664,6 @@
             <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/dao/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -640,13 +681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/entity/WeatherData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="439">
@@ -654,24 +688,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/provider/ScheduledStation.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/security/SecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="20" selection-end-column="48" />
+        <state relative-caret-position="453">
+          <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/entity/WeatherData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/dao/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/meteo/provider/OwmWeatherProviderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="691">
+          <caret line="38" column="82" selection-start-line="38" selection-start-column="82" selection-end-line="38" selection-end-column="82" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/meteo/provider/ScheduledStationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="84">
+          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/security/SecurityConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/provider/ScheduledStation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="168">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/meteo/controller/MainControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-415">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/meteo/controller/MainServerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/meteo/provider/OwmWeatherProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="50" column="25" lean-forward="true" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
         </state>
       </provider>
     </entry>

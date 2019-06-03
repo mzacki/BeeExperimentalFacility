@@ -4,12 +4,10 @@ import com.meteo.entity.WeatherData;
 import net.aksingh.owmjapis.api.APIException;
 import net.aksingh.owmjapis.core.OWM;
 import net.aksingh.owmjapis.model.CurrentWeather;
-import net.aksingh.owmjapis.model.param.Weather;
 import org.springframework.stereotype.Component;
 
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
-import java.util.List;
 
 /**
  * Created by Matt on 11.09.2018 at 20:41.
@@ -37,14 +35,14 @@ public class OwmWeatherProvider {
         }
 
 
-        String localisation = cwd.getCityName();
+        // String localisation = cwd.getCityName();
         double windSpeed = cwd.getWindData().getSpeed();
         double temperature = Math.round(cwd.getMainData().getTemp() - 273.15);
         double pressure = cwd.getMainData().getPressure();
         double humidity = cwd.getMainData().getHumidity();
         double cloudCover = cwd.getCloudData().getCloud();
-        List<Weather> overall = cwd.getWeatherList();
-        String description = String.valueOf(cwd.getWeatherList().get(0).getMoreInfo());
+        // List<Weather> overall = cwd.getWeatherList();
+        // String description = String.valueOf(cwd.getWeatherList().get(0).getMoreInfo());
 
         ZonedDateTime zonedDateTimeNow = ZonedDateTime.now(ZoneId.of("Europe/Paris"));
 
