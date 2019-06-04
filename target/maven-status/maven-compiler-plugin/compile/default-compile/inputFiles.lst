@@ -1,0 +1,9 @@
+D:\Dropbox\PROJECTS\ApiTest\src\main\java\com\meteo\dao\WeatherDataRepository.java
+D:\Dropbox\PROJECTS\ApiTest\src\main\java\com\meteo\provider\ScheduledStation.java
+D:\Dropbox\PROJECTS\ApiTest\src\main\java\com\meteo\provider\OwmWeatherProvider.java
+D:\Dropbox\PROJECTS\ApiTest\src\main\java\com\meteo\security\SecurityConfig.java
+D:\Dropbox\PROJECTS\ApiTest\src\main\java\com\meteo\entity\User.java
+D:\Dropbox\PROJECTS\ApiTest\src\main\java\com\meteo\entity\WeatherData.java
+D:\Dropbox\PROJECTS\ApiTest\src\main\java\com\meteo\Application.java
+D:\Dropbox\PROJECTS\ApiTest\src\main\java\com\meteo\controller\MainController.java
+D:\Dropbox\PROJECTS\ApiTest\src\main\java\com\meteo\dao\UserRepository.java

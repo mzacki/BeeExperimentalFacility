@@ -1,0 +1,9 @@
+com\meteo\dao\UserRepository.class
+com\meteo\provider\ScheduledStation.class
+com\meteo\provider\OwmWeatherProvider.class
+com\meteo\security\SecurityConfig.class
+com\meteo\controller\MainController.class
+com\meteo\entity\WeatherData.class
+com\meteo\entity\User.class
+com\meteo\Application.class
+com\meteo\dao\WeatherDataRepository.class
