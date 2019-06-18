@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Contract form | IT-SMS</title>
+    <link rel="stylesheet" th:href="@{/static/css/bootstrap.min.css}"/>
+</head>
+<body>
+<div class="container">
+    <h3>Colony. Swarm management system</h3>
+    <hr>
+    <h4>Beehive details</h4>
+    <hr>
+    <p class="h4 mb-4">Edit beehive details</p>
+    <form action="#" th:action="@{/save}" th:object="${beehive}" method="post">
+        <input type="hidden" th:field="*{id}" />
+        <label for="beehiveColour">Beehive colour</label>
+        <input id="beehiveColour" type="text" th:field="*{colour}" class="form-control mb-4 col-4"
+               placeholder="Enter beehive colour..."  />
+        <label for="queenID">Queen ID</label>
+        <input id="queenID" type="text" th:if="${contract?.software?.name != null}"
+               th:field="*{software.name}"
+               class="form-control mb-4 col-4"
+               placeholder="Enter software name..." readonly="readonly"/>
+        <small id="noAuth" class="form-text text-muted">You have no authority to edit this field.</small>
+        <br><br>
+        <label for="startDate">Contract begin date</label>
+        <input id="startDate" type="date" th:field="*{startDate}" class="form-control mb-4 col-4"
+               placeholder="Enter start date" />
+        <label for="endDate">Valid through</label>
+        <input id="endDate" type="date" th:field="*{endDate}" class="form-control mb-4 col-4"
+               placeholder="Enter end date" />
+        <label for="income">Income</label>
+        <input id="income" type="text" th:field="*{income}" class="form-control mb-4 col-4"
+               placeholder="Enter income" />
+        <label for="incomeRange">Income range</label>
+        <input id="incomeRange" type="text" th:field="*{range}" class="form-control mb-4 col-4"
+               placeholder="Enter income range" />
+        <label for="enabled">Active</label>
+        <input id="enabled" type="text" th:field="*{enabled}" class="form-control mb-4 col-4"
+               placeholder="false / true" />
+        <small id="disable" class="form-text text-muted">You can also disable contracts using DISABLE button</small>
+        <br><br>
+        <!-- hidden values for Software entity - not to be updated by the user -->
+        <input th:if="${contract?.software?.id != null}" type="hidden" th:field="*{software.id}" />
+        <input th:if="${contract?.software?.description != null}" type="hidden"
+               th:field="*{software.description}" />
+        <input th:if="${contract?.software?.technology != null}" type="hidden"
+               th:field="*{software.technology}"  />
+        <input th:if="${contract?.software?.owner != null}" type="hidden" th:field="*{software.owner}"/>
+        <button type="submit" class="btn btn-info col-2">Update</button>
+    </form>
+    <hr>
+    <a th:href="@{/list}">Back to the list</a>
+</div>
+</body>
+</html>

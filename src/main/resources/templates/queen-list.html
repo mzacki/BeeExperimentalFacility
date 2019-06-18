@@ -4,7 +4,7 @@
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 
 <head>
-    <title>Behive list | Colony</title>
+    <title>Queen list | Colony</title>
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
 </head>
 
@@ -14,7 +14,7 @@
 
     <h3>Colony. Swarm management system</h3>
     <hr>
-    <h4>Beehives within the colony</h4>
+    <h4>Queens within the colony</h4>
     <hr>
     <div>
         <form th:action="@{/logout}" method="post">
@@ -28,7 +28,7 @@
     <!-- ACTIVE ONLY BUTTON -->
     <a th:href="@{/listNucs}" class="btn btn-secondary btn-sm mb-3">Nucs only</a>
     <!-- SOFTWARE LIST BUTTON -->
-    <a th:href="@{/queenList}" class="btn btn-secondary btn-sm mb-3">Queens</a>
+    <a th:href="@{/systems}" class="btn btn-secondary btn-sm mb-3">System list</a>
     <!-- DATATABLES VIEW -->
     <a th:href="@{/datatable}" class="btn btn-dark btn-sm mb-3">Datatable view</a>
     <!-- ABOUT BUTTON -->
@@ -37,28 +37,20 @@
     <table class="table table-bordered table-striped">
         <thead>
         <tr>
-            <th>Beehive ID</th>
-            <th>Colour</th>
+            <th>Queen ID</th>
             <th>Breed</th>
-            <th>Queen</th>
-            <th>Start date</th>
-            <th>End date</th>
-            <th>Numbers</th>
-            <th>Nuc</th>
+            <th>Marking</th>
+            <th>Year</th>
         </tr>
         </thead>
 
         <tbody>
-        <tr th:each="tempBeehive : ${beehives}">
+        <tr th:each="tempQueen : ${queens}">
 
-            <td th:text="${tempBeehive?.id}"/>
-            <td th:text="${tempBeehive?.colour}"/>
-            <td th:text="${tempBeehive?.breed}"/>
-            <td th:text="${tempBeehive?.queen?.marking}"/>
-            <td th:text="${tempBeehive?.startDate}" />
-            <td th:text="${tempBeehive?.endDate}" />
-            <td th:text="${tempBeehive?.numbers}" />
-            <td th:text="${tempBeehive?.nuc}" />
+            <td th:text="${tempQueen?.id}"/>
+            <td th:text="${tempQueen?.breed}"/>
+            <td th:text="${tempQueen?.marking}"/>
+            <td th:text="${tempQueen?.year}"/>
 
             <!--<td>
                 <a th:href="@{/showUpdateForm(id=${tempContract.id})}"

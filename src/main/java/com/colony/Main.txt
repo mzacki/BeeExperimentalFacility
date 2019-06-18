@@ -1,0 +1,35 @@
+package com.colony;
+
+import com.colony.persistence.dao.BeehiveRepository;
+import com.colony.persistence.dao.QueenRepository;
+import com.colony.persistence.entity.Beehive;
+import com.colony.persistence.entity.Queen;
+import lombok.RequiredArgsConstructor;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+/**
+ * Created by Matt on 13.06.2019 at 19:42.
+ */
+@RequiredArgsConstructor
+@SpringBootApplication
+public class Main implements CommandLineRunner {
+
+    private final BeehiveRepository beehiveRepository;
+    private final QueenRepository queenRepository;
+
+    public static void main(String[] args) {
+        SpringApplication.run(Main.class, args);
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
+
+        //Beehive beehive = new Beehive("yellow", "Sklenar");
+        //Queen queen = new Queen(2019, "green", "PK2");
+
+        beehiveRepository.save(new Beehive("yellow", "Sklenar", new Queen(2019, "green", "PK2")));
+
+    }
+}
