@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Datatable | Colony</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <script th:src="@{/js/jquery.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <link rel="stylesheet" th:href="@{css/datatables.min.css}">
+    <script th:src="@{/js/datatables.min.js}"></script>
+    <script th:src="@{/js/datatable.js}"></script>
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+    <h3>Colony | Swarm Management System</h3>
+    <hr>
+    <h4>Datatable</h4>
+    <hr>
+    <div>
+        <!-- ADD BUTTON -->
+        <a th:href="@{/showAddForm}" class="btn btn-primary btn-sm mb-3">New beehive</a>
+        <!-- ALL CONTRACTS BUTTON -->
+        <a th:href="@{/db}" class="btn btn-secondary btn-sm mb-3">All beehives</a>
+        <!-- ACTIVE ONLY BUTTON -->
+        <a th:href="@{/listNucs}" class="btn btn-secondary btn-sm mb-3">Nucs only</a>
+        <!-- SOFTWARE LIST BUTTON -->
+        <a th:href="@{/queens}" class="btn btn-secondary btn-sm mb-3">Queens</a>
+        <!-- ABOUT BUTTON -->
+        <a th:href="@{/about}" class="btn btn-secondary btn-sm mb-3">About</a>
+            <!-- TABLE -->
+            <table id="beehiveTable" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>Beehive ID</th>
+                    <th>Beehive colour</th>
+                    <th>Breed</th>
+                    <th>Queen marking</th>
+                    <th>Bee numbers</th>
+                    <th>Nucleus</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+</div>
+</body>
+</html>
+
+
+

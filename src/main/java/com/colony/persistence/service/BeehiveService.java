@@ -13,5 +13,6 @@ public interface BeehiveService {
     Beehive findByID(long id);
     void save(Beehive beehive);
     void deleteByID(long id);
+    List<Beehive> findAllNucs();
 
 }

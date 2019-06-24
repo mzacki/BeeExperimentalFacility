@@ -29,11 +29,11 @@ public class BeehiveServiceImplementation implements BeehiveService {
         return beehiveRepository.findAll();
     }
 
-    // how te get only nucs
-    /*@Override
-    public List<Beehive> getEnabled() {
-        return
-***REMOVED***
+
+    @Override
+    public List<Beehive> findAllNucs() {
+        return beehiveRepository.findAllNucs();
+    }
 
     @Override
     public Beehive findByID(long id) {
