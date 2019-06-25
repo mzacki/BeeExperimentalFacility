@@ -60,24 +60,24 @@
             <td th:text="${tempBeehive?.numbers}" />
             <td th:text="${tempBeehive?.nuc}" />
 
-            <!--<td>
-                <a th:href="@{/showUpdateForm(id=${tempContract.id})}"
+            <td>
+                <a th:href="@{/showUpdateForm(id=${tempBeehive.id})}"
                    class="btn btn-info btn-sm">
                     Update
                 </a>
-                <a th:href="@{/disable(id=${tempContract.id})}"
-                   class="btn btn-info btn-sm" onclick="if (!(confirm('Disable for sure?'))) return false">
-                    Disable
+                <a th:href="@{/disableNuc(id=${tempBeehive.id})}"
+                   class="btn btn-info btn-sm" onclick="if (!(confirm('Not a nuc anymore?'))) return false">
+                    Not nuc
                 </a>
-                <a th:href="@{/systemDetails(id=${tempContract.id})}"
+                <a th:href="@{/queenDetails(id=${tempBeehive.id})}"
                    class="btn btn-outline-info btn-sm">
-                    Details
+                    Queen
                 </a>
-                <a th:href="@{/delete(id=${tempContract.id})}"
+                <a th:href="@{/delete(id=${tempBeehive.id})}"
                    class="btn btn-danger btn-sm" onclick="if (!(confirm('Delete for sure?'))) return false">
                     Delete
                 </a>
-            </td>-->
+            </td>
 
         </tr>
         </tbody>
