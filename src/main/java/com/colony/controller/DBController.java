@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -54,13 +57,45 @@ public class DBController {
         return "queen-list";
     }
 
-
-
     @GetMapping("/showAddForm")
     public String showAddForm(Model model) {
         Beehive beehive = new Beehive();
         model.addAttribute("beehive", beehive);
-        return "form";
+        return "new-beehive-form";
+    }
+
+    @GetMapping("/showUpdateForm")
+    public String showUpdateForm(@RequestParam("id") long id, Model model) {
+        Beehive beehive = beehiveService.findByID(id);
+        model.addAttribute("beehive", beehive);
+        return "beehive-form";
+    }
+
+    @PostMapping("/save")
+    public String saveBeehive(@ModelAttribute("beehive") Beehive beehive) {
+        beehiveService.save(beehive);
+        return "redirect:/db";
+    }
+
+    @GetMapping("/delete")
+    public String delete(@RequestParam("id") long id) {
+        beehiveService.deleteByID(id);
+        return "redirect:/db";
+    }
+
+    @GetMapping("/queenDetails")
+    public String queenDetails(Model model, long id) {
+        Beehive beehive = beehiveService.findByID(id);
+        model.addAttribute("beehive", beehive);
+        return "queen-details";
+    }
+
+    @GetMapping("/disableNuc")
+    public String disableContract(@RequestParam long id) {
+        Beehive beehive = beehiveService.findByID(id);
+        beehive.setNuc(false);
+        beehiveService.save(beehive);
+        return "redirect:/db";
     }
 
 
