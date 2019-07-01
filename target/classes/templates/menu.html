@@ -9,19 +9,23 @@
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
 </head>
 <body>
-<a th:href="@{/meteo}" class="btn btn-dark btn-lg btn-block">Meteo</a>
-<a th:href="@{/calc}" class="btn btn-dark btn-lg btn-block disabled">Colony Expansion Algorithm</a>
-<!--<div sec:authorize access="hasRole('ADMIN')"> shows data base to nobody ??? -->
-<div>
-    <a th:href="@{/db}" type="button" class="btn btn-dark btn-lg btn-block">Database</a>
+<div class="container">
+    <a th:href="@{/meteo}" class="btn btn-outline-dark btn-lg btn-block">Meteo</a>
+    <br>
+    <a th:href="@{/calc}" class="btn btn-outline-dark btn-lg btn-block disabled">Colony Expansion Algorithm</a>
+    <br>
+    <!--<div sec:authorize access="hasRole('ADMIN')"> shows data base to nobody ??? -->
+    <a th:href="@{/db}" type="button" class="btn btn-outline-dark btn-lg btn-block">Database</a>
+    <br>
+    <a th:href="@{/calc}" type="button" class="btn btn-outline-dark btn-lg btn-block disabled">REST API</a>
+    <br>
+    <hr>
+    <p>
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" class="btn btn-outline-danger btn-lg btn-block" value="Logout"/>
+    </form>
+    </p>
 </div>
-<a th:href="@{/calc}"type="button" class="btn btn-dark btn-lg btn-block disabled">REST API</a>
-<hr>
-<p>
-<form th:action="@{/logout}" method="post">
-    <input type="submit" class="btn btn-danger btn-lg btn-block" value="Logout"/>
-</form>
-</p>
 <hr>
 <div style="text-align: center">
     <span sec:authorize="isAuthenticated()">
