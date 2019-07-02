@@ -3,13 +3,66 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Weather significant</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
 </head>
 <body>
+<div class="container">
+    <h3>Colony. Swarm management system</h3>
+    <hr>
+    <h4>Weather Significant</h4>
+    <hr>
     <div>
-        <p th:text="'Current human time is ' + ${Date}" />
-        <p th:text="'Current meteo conditions for Bee Experimental Facility:'" />
-        <p th:text="${Meteo}" />
+        <nav class="navbar navbar-dark bg-dark">
+            <span class="navbar-text">
+                <p th:text="'Current meteo conditions for Bee Experimental Facility'"/>
+            </span>
+            <span class="navbar-text">
+                <p th:text="'Significant time and date: ' + ${Date}"/>
+            </span>
+        </nav>
     </div>
+    <div>
+        <table class="table table-bordered table-dark">
+            <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Unit</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td th:text="'Temperature'"/>
+                <td th:text="'Celsius'"/>
+                <td th:text="${WeatherData.temperature}"/>
+            </tr>
+            <tr>
+                <td th:text="'Atmospheric pressure'"/>
+                <td th:text="'hPa'"/>
+                <td th:text="${WeatherData.pressure}"/>
+            </tr>
+            <tr>
+                <td th:text="'Wind speed'"/>
+                <td th:text="'m / s'"/>
+                <td th:text="${WeatherData.wind}"/>
+            </tr>
+            <tr>
+                <td th:text="'Cloud cover'"/>
+                <td th:text="'%'"/>
+                <td th:text="${WeatherData.cloudCover}"/>
+            </tr>
+            <tr>
+                <td th:text="'Air humidity'"/>
+                <td th:text="'%'"/>
+                <td th:text="${WeatherData.humidity}"/>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="button-center">
+        <a th:href="@{/menu}" class="btn btn-secondary btn-lg">Back to main menu</a>
+    </div>
+</div>
 </body>
 </html>
