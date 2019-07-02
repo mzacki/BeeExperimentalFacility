@@ -76,7 +76,9 @@ public class MainController {
         WeatherData weatherData = owmWeatherProvider.getWeatherData();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE, dd-MM-yyyy HH:mm:ss");
         model.addAttribute("Date", zonedDateTimeNow.format(formatter));
-        model.addAttribute("Meteo", weatherData.toString());
+        // data visualisation changed; the below line is no longer useful
+        //model.addAttribute("Meteo", weatherData.toString());
+        model.addAttribute("WeatherData", weatherData);
         return "meteo";
     }
 
