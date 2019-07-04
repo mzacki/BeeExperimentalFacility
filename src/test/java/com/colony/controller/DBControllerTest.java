@@ -12,34 +12,57 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 /**
- * Created by Matt on 03.06.2019 at 19:04.
+ * Created by Matt on 03.07.2019 at 20:15.
  */
-
+/*
+    Tests the web layer only without starting a server. Uses Mock MVC.
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@AutoConfigureMockMvc(secure = false)
-public class MainControllerTest {
+@AutoConfigureMockMvc
+public class DBControllerTest {
 
     @Autowired
     private MockMvc mvc;
 
     @Test
-    public void mainSlashTest() throws Exception {
-        this.mvc.perform(get("/")).andExpect(status().is3xxRedirection());
+    public void db() throws Exception {
+        this.mvc.perform(get("/db")).andExpect(status().isOk());
     }
 
     @Test
-    public void indexTest() throws Exception {
-        this.mvc.perform(get("/index")).andExpect(status().isOk());
+    public void datatable() {
     }
 
     @Test
-    public void loginTest() throws Exception {
-        this.mvc.perform(get("/login")).andExpect(status().isOk());
+    public void listNucs() {
     }
 
     @Test
-    public void menuAccessTest() throws Exception {
-        this.mvc.perform(get("/menu")).andExpect(status().is3xxRedirection());
+    public void queenList() {
+    }
+
+    @Test
+    public void showAddForm() {
+    }
+
+    @Test
+    public void showUpdateForm() {
+    }
+
+    @Test
+    public void saveBeehive() {
+    }
+
+    @Test
+    public void delete() {
+    }
+
+    @Test
+    public void queenDetails() {
+    }
+
+    @Test
+    public void disableContract() {
     }
 }
