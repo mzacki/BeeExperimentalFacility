@@ -1,7 +1,6 @@
 package com.colony.persistence.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.persistence.*;
 
@@ -9,8 +8,7 @@ import javax.persistence.*;
  * Created by Matt on 13.06.2019 at 17:28.
  */
 
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name="queens")
 public class Queen {
@@ -34,4 +32,13 @@ public class Queen {
         this.breed = breed;
     }
 
+    @Override
+    public String toString() {
+        return "Queen{" +
+                "id=" + id +
+                ", year=" + year +
+                ", marking='" + marking + '\'' +
+                ", breed='" + breed + '\'' +
+                '}';
+    }
 }

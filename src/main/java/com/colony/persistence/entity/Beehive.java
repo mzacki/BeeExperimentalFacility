@@ -1,7 +1,6 @@
 package com.colony.persistence.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -11,8 +10,7 @@ import java.time.LocalDate;
  * Created by Matt on 13.06.2019 at 17:21.
  */
 
-@Getter
-@Setter
+@Data
 @Table(name="beehives")
 @Entity
 public class Beehive {

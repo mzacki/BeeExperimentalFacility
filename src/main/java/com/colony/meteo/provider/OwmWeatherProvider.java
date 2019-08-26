@@ -34,22 +34,29 @@ public class OwmWeatherProvider {
             e.printStackTrace();
         }
 
-
-        // String localisation = cwd.getCityName();
-        double windSpeed = cwd.getWindData().getSpeed();
-        double temperature = Math.round(cwd.getMainData().getTemp() - 273.15);
-        double pressure = cwd.getMainData().getPressure();
-        double humidity = cwd.getMainData().getHumidity();
-        double cloudCover = cwd.getCloudData().getCloud();
-        // List<Weather> overall = cwd.getWeatherList();
-        // String description = String.valueOf(cwd.getWeatherList().get(0).getMoreInfo());
-
         ZonedDateTime zonedDateTimeNow = ZonedDateTime.now(ZoneId.of("Europe/Paris"));
+        // String localisation = cwd.getCityName();
+        if (cwd != null) {
+            double windSpeed = cwd.getWindData().getSpeed();
+            double temperature = Math.round(cwd.getMainData().getTemp() - 273.15);
+            double pressure = cwd.getMainData().getPressure();
+            double humidity = cwd.getMainData().getHumidity();
+            double cloudCover = cwd.getCloudData().getCloud();
+            // List<Weather> overall = cwd.getWeatherList();
+            // String description = String.valueOf(cwd.getWeatherList().get(0).getMoreInfo());
 
-        return new WeatherData(zonedDateTimeNow.toLocalDate(), zonedDateTimeNow.toLocalTime(), temperature, windSpeed,
-                pressure,
-                humidity,
-                cloudCover);
+            return new WeatherData(zonedDateTimeNow.toLocalDate(), zonedDateTimeNow.toLocalTime(), temperature, windSpeed,
+                    pressure,
+                    humidity,
+                    cloudCover);
+        } else {
+            return null;
+        }
+
+
+
+
+
 
     }
 
