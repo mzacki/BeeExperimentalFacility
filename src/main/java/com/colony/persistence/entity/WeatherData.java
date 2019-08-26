@@ -1,6 +1,6 @@
 package com.colony.persistence.entity;
 
-import lombok.Getter;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter;
  * Created by Matt on 20.09.2018 at 20:20.
  */
 
-@Getter
+@Data
 @Entity
 @Table(name="conditions")
 public class WeatherData {
