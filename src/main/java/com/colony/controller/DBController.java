@@ -93,7 +93,7 @@ public class DBController {
     @GetMapping("/disableNuc")
     public String disableContract(@RequestParam long id) {
         Beehive beehive = beehiveService.findByID(id);
-        beehive.setNuc(false);
+      //  beehive.setNuc(false);
         beehiveService.save(beehive);
         return "redirect:/db";
     }
