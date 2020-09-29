@@ -53,7 +53,7 @@ public class Main {
 
         // ...with lamdba
 
-        Collections.sort(queens, (q1, q2) -> q1.getBreed().compareTo(q2.getBreed()));
+      //  Collections.sort(queens, (q1, q2) -> q1.getBreed().compareTo(q2.getBreed()));
 
         for (Queen queen : queens) {
             System.out.println(queen.toString());
@@ -73,9 +73,8 @@ public class Main {
     public final static String doSomething(Useable useable, String input) {
         return useable.takeNectarOrPollen(input);
     }
-}
 
-/*class CodeToRun implements Runnable {
+    /*class CodeToRun implements Runnable {
 
     @Override
     public void run() {
@@ -83,8 +82,11 @@ public class Main {
     }
 }*/
 
-interface Useable {
-    String takeNectarOrPollen(String good);
+    interface Useable {
+        String takeNectarOrPollen(String good);
+    }
 }
+
+
 
 
