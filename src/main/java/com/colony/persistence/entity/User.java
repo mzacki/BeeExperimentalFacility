@@ -11,18 +11,18 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "***REMOVED***s")
+@Table(name = "users")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "***REMOVED***name")
-    private String ***REMOVED***name;
+    @Column(name = "username")
+    private String username;
 
-    @Column(name = "***REMOVED***word")
-    private String ***REMOVED***word;
+    @Column(name = "password")
+    private String password;
 
     @Column(name = "role")
     private String role;

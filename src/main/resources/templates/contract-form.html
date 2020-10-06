@@ -42,7 +42,7 @@
                placeholder="false / true" />
         <small id="disable" class="form-text text-muted">You can also disable contracts using DISABLE button</small>
         <br><br>
-        <!-- hidden values for Software entity - not to be updated by the ***REMOVED*** -->
+        <!-- hidden values for Software entity - not to be updated by the user -->
         <input th:if="${contract?.software?.id != null}" type="hidden" th:field="*{software.id}" />
         <input th:if="${contract?.software?.description != null}" type="hidden"
                th:field="*{software.description}" />

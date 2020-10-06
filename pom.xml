@@ -64,7 +64,7 @@
         </dependency>
         <dependency>
             <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-***REMOVED***-starter-client</artifactId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
             <version>2.1.0</version>
         </dependency>
         <dependency>

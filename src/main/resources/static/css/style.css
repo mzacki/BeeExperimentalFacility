@@ -87,7 +87,7 @@ p {
   height: 50px;
 }
 
-#login form input[type="text"], input[type="***REMOVED***word"] {
+#login form input[type="text"], input[type="password"] {
   background-color: #3b4148;
   border-radius: 0px 3px 3px 0px;
   color: #606468;

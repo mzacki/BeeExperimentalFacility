@@ -57,15 +57,15 @@ cwallet.sso.lck# Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
-xc***REMOVED***data/
+xcuserdata/
 
 *.xcscmblueprint
 *.xccheckout
 
 DerivedData/
 *.moved-aside
-*.pbx***REMOVED***
-!default.pbx***REMOVED***
+*.pbxuser
+!default.pbxuser
 *.mode1v3
 !default.mode1v3
 *.mode2v3
