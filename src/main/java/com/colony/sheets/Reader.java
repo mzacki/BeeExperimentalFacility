@@ -16,7 +16,7 @@ public class Reader {
 
 
     private static Sheets sheetsService;
-    private static String SPREADSHEET_ID = "***REMOVED***";
+    private static String SPREADSHEET_ID = "";
 
 
     public static void main(String[] args) throws IOException, GeneralSecurityException {
