@@ -36,19 +36,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .antMatchers("/", "/index","/css/**", "/js/**").permitAll()
                     .antMatchers("/db").hasRole("ADMIN")
                     .anyRequest().authenticated()
-***REMOVED***
+                .and()
                     .formLogin()
                     .loginPage("/login")
                     .failureUrl("/login-error")
                     .permitAll()
-***REMOVED***
+                .and()
                     .logout()
                     .logoutSuccessUrl("/logout")
                     .permitAll()
-***REMOVED***
+                .and()
                     .csrf()
                     .ignoringAntMatchers("/actuator/**")
-***REMOVED***
+                .and()
                     .exceptionHandling().accessDeniedPage("/403");
     }
 
