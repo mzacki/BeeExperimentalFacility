@@ -20,7 +20,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class GoogleSheetsIntegrationTest {
 
     private static Sheets sheetsService;
-    private static String SPREADSHEET_ID = "***REMOVED***";
+    private static String SPREADSHEET_ID = "";
 
     @BeforeClass
     public static void setup() throws GeneralSecurityException, IOException {

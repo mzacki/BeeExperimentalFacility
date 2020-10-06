@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**
  * Created by Matt on 03.06.2019 at 19:28.
  */
-// to be reworked
+
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class MainServerTest {
@@ -21,6 +21,5 @@ public class MainServerTest {
     @Test
     public void exampleTest() {
         String body = this.restTemplate.getForObject("/", String.class);
-        //assertThat(body).isEqualTo("Hello World");
     }
 }

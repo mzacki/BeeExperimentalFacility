@@ -22,7 +22,7 @@ public class OwmWeatherProviderTest {
     private OWM owm;
 
     public OwmWeatherProviderTest() {
-        this.owm = new OWM("***REMOVED***");
+        this.owm = new OWM("");
     }
 
     @Test
@@ -30,7 +30,7 @@ public class OwmWeatherProviderTest {
         CurrentWeather cwd = null;
 
         try {
-            cwd = owm.currentWeatherByCoords(***REMOVED***, ***REMOVED***);
+            cwd = owm.currentWeatherByCoords();
         } catch (APIException e) {
             e.printStackTrace();
         }
