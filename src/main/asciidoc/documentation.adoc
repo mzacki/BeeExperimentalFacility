@@ -2,8 +2,7 @@
 = Colony Documentation
 
 temporary URI: http://bxf.herokuapp.com[bxf.herokuapp.com]
-
-IT-SMS
+API-TEST
 v1.0, 2019-05-28
 
 :someVariable: 1.0.0
