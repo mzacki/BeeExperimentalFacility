@@ -22,8 +22,8 @@ import java.util.List;
 public class DBController {
 
 
-    private BeehiveService beehiveService;
-    private QueenService queenService;
+    private final BeehiveService beehiveService;
+    private final QueenService queenService;
 
     @Autowired
     public DBController(BeehiveService beehiveService, QueenService queenService) {

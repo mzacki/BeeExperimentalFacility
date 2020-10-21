@@ -4,6 +4,7 @@ import com.colony.persistence.entity.WeatherData;
 import net.aksingh.owmjapis.api.APIException;
 import net.aksingh.owmjapis.core.OWM;
 import net.aksingh.owmjapis.model.CurrentWeather;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.time.ZoneId;
@@ -15,17 +16,16 @@ import java.time.ZonedDateTime;
 @Component
 public class OwmWeatherProvider {
 
-    private OWM owm;
+    private final OWM owm;
 
+    @Autowired
     public OwmWeatherProvider() {
         this.owm = new OWM("");
     }
 
     public WeatherData getWeatherData() {
 
-
         CurrentWeather cwd = null;
-
 
         try {
             cwd = owm.currentWeatherByCoords(50, 19);
@@ -49,11 +49,6 @@ public class OwmWeatherProvider {
         } else {
             return null;
         }
-
-
-
-
-
 
     }
 

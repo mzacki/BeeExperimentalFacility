@@ -12,6 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**
  * Created by Matt on 29.05.2019 at 19:28.
  */
+
 @Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest

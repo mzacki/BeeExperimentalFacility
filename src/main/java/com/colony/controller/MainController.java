@@ -18,15 +18,17 @@ import java.time.format.DateTimeFormatter;
 /**
  * Created by Matt on 05.05.2019 at 19:26.
  */
+
 @Controller
 public class MainController {
 
+    private final OwmWeatherProvider owmWeatherProvider;
+    private static final String LOGIN = "login";
+
     @Autowired
-    OwmWeatherProvider owmWeatherProvider;
-    @Autowired
-    WeatherDataRepository weatherDataRepository;
-    @Autowired
-    BeehiveService beehiveService;
+    public MainController(OwmWeatherProvider owmWeatherProvider) {
+        this.owmWeatherProvider = owmWeatherProvider;
+    }
 
     @GetMapping("/")
     public String mainPage() {
@@ -36,7 +38,7 @@ public class MainController {
     @GetMapping("/index")
     public String index(Model model) {
         LocalDateTime dateTime = LocalDateTime.now();
-        long year = 130000000 + dateTime.getYear();
+        long year = (long) 130000000 + dateTime.getYear();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE, dd-MM-yyyy HH:mm:ss");
         model.addAttribute("Date", dateTime.format(formatter));
         model.addAttribute("BeeDate", year);
@@ -50,19 +52,19 @@ public class MainController {
 
     @GetMapping("/login")
     public String login() {
-        return "login";
+        return LOGIN;
     }
 
     @RequestMapping("/login-error")
     public String loginError(Model model) {
         model.addAttribute("loginError", true);
-        return "login";
+        return LOGIN;
     }
 
     @RequestMapping("/logout")
     public String logout(Model model) {
         model.addAttribute("logout", true);
-        return "login";
+        return LOGIN;
     }
 
     @GetMapping("/menu")
@@ -76,18 +78,13 @@ public class MainController {
         WeatherData weatherData = owmWeatherProvider.getWeatherData();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE, dd-MM-yyyy HH:mm:ss");
         model.addAttribute("Date", zonedDateTimeNow.format(formatter));
-        // data visualisation changed; the below line is no longer useful
-        //model.addAttribute("Meteo", weatherData.toString());
         model.addAttribute("WeatherData", weatherData);
         return "meteo";
     }
-
-
 
     @GetMapping("/403")
     public String accesDenied() {
         return "403";
     }
-
 
 }

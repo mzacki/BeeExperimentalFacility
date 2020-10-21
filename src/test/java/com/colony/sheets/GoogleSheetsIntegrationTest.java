@@ -20,7 +20,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class GoogleSheetsIntegrationTest {
 
     private static Sheets sheetsService;
-    private static String SPREADSHEET_ID = "";
+    private static final String SPREADSHEET_ID = "";
 
     @BeforeClass
     public static void setup() throws GeneralSecurityException, IOException {
@@ -29,18 +29,7 @@ public class GoogleSheetsIntegrationTest {
 
     @Test
     public void whenWriteSheet_thenReadSheetOk() throws IOException {
-        /*ValueRange body = new ValueRange()
-                .setValues(Arrays.asList(
-                        Arrays.asList("Expenses January"),
-                        Arrays.asList("books", "30"),
-                        Arrays.asList("pens", "10"),
-                        Arrays.asList("Expenses February"),
-                        Arrays.asList("clothes", "20"),
-                        Arrays.asList("shoes", "5")));
-        UpdateValuesResponse result = sheetsService.spreadsheets().values()
-                .update(SPREADSHEET_ID, "A1", body)
-                .setValueInputOption("RAW")
-                .execute();*/
+
         List<String> ranges = Arrays.asList("E1","E4");
         BatchGetValuesResponse readResult = sheetsService.spreadsheets().values()
                 .batchGet(SPREADSHEET_ID)
@@ -55,4 +44,5 @@ public class GoogleSheetsIntegrationTest {
         assertThat(febTotal.getValues().get(0).get(0))
                 .isEqualTo("25");
     }
+
 }
