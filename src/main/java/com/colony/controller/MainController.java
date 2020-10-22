@@ -1,19 +1,16 @@
 package com.colony.controller;
 
 import com.colony.meteo.provider.OwmWeatherProvider;
-import com.colony.persistence.dao.WeatherDataRepository;
 import com.colony.persistence.entity.WeatherData;
-import com.colony.persistence.service.BeehiveService;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
 
 /**
  * Created by Matt on 05.05.2019 at 19:26.

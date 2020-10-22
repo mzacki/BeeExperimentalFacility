@@ -24,6 +24,7 @@ public class DBController {
 
     private final BeehiveService beehiveService;
     private final QueenService queenService;
+    private static final String REDIRECT_DB = "redirect:/db";
 
     @Autowired
     public DBController(BeehiveService beehiveService, QueenService queenService) {
@@ -74,13 +75,13 @@ public class DBController {
     @PostMapping("/save")
     public String saveBeehive(@ModelAttribute("beehive") Beehive beehive) {
         beehiveService.save(beehive);
-        return "redirect:/db";
+        return REDIRECT_DB;
     }
 
     @GetMapping("/delete")
     public String delete(@RequestParam("id") long id) {
         beehiveService.deleteByID(id);
-        return "redirect:/db";
+        return REDIRECT_DB;
     }
 
     @GetMapping("/queenDetails")
@@ -93,10 +94,9 @@ public class DBController {
     @GetMapping("/disableNuc")
     public String disableContract(@RequestParam long id) {
         Beehive beehive = beehiveService.findByID(id);
-      //  beehive.setNuc(false);
+        beehive.setNuc(false);
         beehiveService.save(beehive);
-        return "redirect:/db";
+        return REDIRECT_DB;
     }
-
 
 }
