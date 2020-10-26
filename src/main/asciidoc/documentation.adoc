@@ -1,5 +1,5 @@
 
-= Colony Documentation
+= bxf Documentation
 
 temporary URI: http://bxf.herokuapp.com[bxf.herokuapp.com]
 API-TEST
