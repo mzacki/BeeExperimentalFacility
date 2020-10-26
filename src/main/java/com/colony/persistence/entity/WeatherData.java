@@ -68,4 +68,5 @@ public class WeatherData {
                 "humidity: " + humidity + " %" + '\n' +
                 "cloudCover: " + cloudCover + " %" + '\n';
     }
+
 }

@@ -56,4 +56,5 @@ public class Beehive {
         this.breed = breed;
         this.queen = queen;
     }
+
 }

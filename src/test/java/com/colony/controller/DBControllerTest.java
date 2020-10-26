@@ -65,4 +65,5 @@ public class DBControllerTest {
     @Test
     public void disableContract() {
     }
+
 }

@@ -41,4 +41,5 @@ public class Queen {
                 ", breed='" + breed + '\'' +
                 '}';
     }
+
 }

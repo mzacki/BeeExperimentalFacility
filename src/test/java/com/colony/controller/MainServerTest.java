@@ -22,4 +22,5 @@ public class MainServerTest {
     public void exampleTest() {
         String body = this.restTemplate.getForObject("/", String.class);
     }
+
 }

@@ -8,19 +8,20 @@ import java.io.IOException;
 import java.security.GeneralSecurityException;
 import java.util.Arrays;
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Created by Matt on 05.06.2019 at 19:02.
  */
+
 public class Reader {
 
-
-    private static Sheets sheetsService;
-    private static String SPREADSHEET_ID = "";
-
+    private static final Logger LOG = LoggerFactory.getLogger(Reader.class);
+    private static final String SPREADSHEET_ID = "";
 
     public static void main(String[] args) throws IOException, GeneralSecurityException {
-        sheetsService = SheetsServiceUtil.getSheetsService();
+        Sheets sheetsService = SheetsServiceUtil.getSheetsService();
         List<String> ranges = Arrays.asList("E1","E4");
         BatchGetValuesResponse readResult = sheetsService.spreadsheets().values()
                 .batchGet(SPREADSHEET_ID)
@@ -28,8 +29,7 @@ public class Reader {
                 .execute();
 
         ValueRange januaryTotal = readResult.getValueRanges().get(0);
-        System.out.println("January total is: " + januaryTotal);
-
-
+        LOG.info("January total is: {}", januaryTotal);
     }
+
 }

@@ -1,13 +1,12 @@
 package com.colony.persistence.service;
 
+import com.colony.exception.NotFoundException;
 import com.colony.persistence.dao.BeehiveRepository;
 import com.colony.persistence.entity.Beehive;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Optional;
 
 /**
  * Created by Matt on 13.06.2019 at 18:53.
@@ -17,7 +16,7 @@ import java.util.Optional;
 @Service
 public class BeehiveServiceImplementation implements BeehiveService {
 
-    private BeehiveRepository beehiveRepository;
+    private final BeehiveRepository beehiveRepository;
 
     @Autowired
     public BeehiveServiceImplementation(BeehiveRepository beehiveRepository) {
@@ -37,14 +36,8 @@ public class BeehiveServiceImplementation implements BeehiveService {
 
     @Override
     public Beehive findByID(long id) {
-        Optional<Beehive> result = beehiveRepository.findById(id);
-        Beehive beehive = null;
-        if (result.isPresent()) {
-            beehive = result.get();
-        } else {
-            throw new RuntimeException("Beehive hasn't found.");
-        }
-        return beehive;
+        return beehiveRepository.findById(id)
+                .orElseThrow(() -> new NotFoundException("Beehive hasn't found"));
     }
 
     @Override

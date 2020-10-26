@@ -16,4 +16,5 @@ public interface BeehiveRepository extends JpaRepository<Beehive, Long> {
 
     @Query("SELECT b FROM Beehive b WHERE b.nuc = true")
     List<Beehive> findAllNucs();
+
 }

@@ -42,4 +42,5 @@ public class MainControllerTest {
     public void menuAccessTest() throws Exception {
         this.mvc.perform(get("/menu")).andExpect(status().is3xxRedirection());
     }
+
 }

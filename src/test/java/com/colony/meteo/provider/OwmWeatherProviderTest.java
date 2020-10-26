@@ -19,7 +19,7 @@ import java.time.ZonedDateTime;
 @SpringBootTest
 public class OwmWeatherProviderTest {
 
-    private OWM owm;
+    private final OWM owm;
 
     public OwmWeatherProviderTest() {
         this.owm = new OWM("");
@@ -47,4 +47,5 @@ public class OwmWeatherProviderTest {
         Assert.assertNotNull(cwd.getMainData().getHumidity());
         Assert.assertNotNull(cwd.getCloudData().getCloud());
     }
+
 }

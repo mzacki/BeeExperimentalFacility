@@ -7,6 +7,7 @@ import java.util.List;
 /**
  * Created by Matt on 13.06.2019 at 18:45.
  */
+
 public interface BeehiveService {
 
     List<Beehive> findAll();

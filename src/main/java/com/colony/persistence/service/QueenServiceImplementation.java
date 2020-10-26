@@ -27,4 +27,5 @@ public class QueenServiceImplementation implements QueenService {
     public List<Queen> findAll() {
         return queenRepository.findAll();
     }
+
 }

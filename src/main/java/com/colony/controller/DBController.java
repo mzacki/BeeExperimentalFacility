@@ -25,6 +25,7 @@ public class DBController {
     private final BeehiveService beehiveService;
     private final QueenService queenService;
     private static final String REDIRECT_DB = "redirect:/db";
+    private static final String BEEHIVE = "beehive";
 
     @Autowired
     public DBController(BeehiveService beehiveService, QueenService queenService) {
@@ -61,14 +62,14 @@ public class DBController {
     @GetMapping("/showAddForm")
     public String showAddForm(Model model) {
         Beehive beehive = new Beehive();
-        model.addAttribute("beehive", beehive);
+        model.addAttribute(BEEHIVE, beehive);
         return "new-beehive-form";
     }
 
     @GetMapping("/showUpdateForm")
     public String showUpdateForm(@RequestParam("id") long id, Model model) {
         Beehive beehive = beehiveService.findByID(id);
-        model.addAttribute("beehive", beehive);
+        model.addAttribute(BEEHIVE, beehive);
         return "beehive-form";
     }
 
@@ -87,7 +88,7 @@ public class DBController {
     @GetMapping("/queenDetails")
     public String queenDetails(Model model, long id) {
         Beehive beehive = beehiveService.findByID(id);
-        model.addAttribute("beehive", beehive);
+        model.addAttribute(BEEHIVE, beehive);
         return "queen-details";
     }
 

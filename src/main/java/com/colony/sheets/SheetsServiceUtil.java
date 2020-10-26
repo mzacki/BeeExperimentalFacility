@@ -13,7 +13,10 @@ import java.security.GeneralSecurityException;
  */
 
 public class SheetsServiceUtil {
+
     private static final String APPLICATION_NAME = "Google Sheets Example";
+
+    private SheetsServiceUtil() {}
 
     public static Sheets getSheetsService() throws IOException, GeneralSecurityException {
         Credential credential = GoogleAuthorizeUtil.authorize();

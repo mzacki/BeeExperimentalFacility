@@ -48,4 +48,5 @@ public class ScheduledStationTest {
     public static void testLast() {
         log.info("Running test 'after class'");
     }
+
 }
